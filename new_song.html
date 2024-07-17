@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Song</title>
+  </head>
+  <body>
+    <h1>Create a New Song</h1>
+    <form method="POST">
+      {{ form.csrf_token }} {{ form.title.label }} {{ form.title }}<br />
+      {{ form.artist.label }} {{ form.artist }}<br />
+      <input type="submit" value="Create Song" />
+    </form>
+  </body>
+</html>

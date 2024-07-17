@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Song to {{ playlist.name }}</title>
+  </head>
+  <body>
+    <h1>Add Song to {{ playlist.name }}</h1>
+    <form method="POST">
+      {{ form.csrf_token }} {{ form.song.label }} {{ form.song }}<br />
+      <input type="submit" value="Add Song" />
+    </form>
+  </body>
+</html>

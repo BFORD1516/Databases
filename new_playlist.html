@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>New Playlist</title>
+  </head>
+  <body>
+    <h1>Create a New Playlist</h1>
+    <form method="POST">
+      {{ form.csrf_token }} {{ form.name.label }} {{ form.name }}<br />
+      {{ form.description.label }} {{ form.description }}<br />
+      <input type="submit" value="Create Playlist" />
+    </form>
+  </body>
+</html>

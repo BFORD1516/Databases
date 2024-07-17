@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ playlist.name }}</title>
+  </head>
+  <body>
+    <h1>{{ playlist.name }}</h1>
+    <p>{{ playlist.description }}</p>
+    <h2>Songs</h2>
+    <ul>
+      {% for song in playlist.songs %}
+      <li>{{ song.title }} by {{ song.artist }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_song_to_playlist', playlist_id=playlist.id) }}"
+      >Add Song</a
+    >
+  </body>
+</html>
